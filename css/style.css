@@ -1,0 +1,431 @@
+/* Variables */
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* Global styles */
+@font-face {
+  font-family: "latobold";
+  src: url("../fonts/lato-bold-webfont.woff2") format("woff2"), url("../fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "latoregular";
+  src: url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "pt_serifbold";
+  src: url("../fonts/ptserif-bold-webfont.woff2") format("woff2"), url("../fonts/ptserif-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "pt_serifregular";
+  src: url("../fonts/ptserif-regular-webfont.woff2") format("woff2"), url("../fonts/ptserif-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: "latoregular", sans-serif;
+  font-weight: normal;
+  color: #797979;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, .h1Style {
+  font-family: "pt_serifregular", serif;
+  font-size: 3.4375rem;
+  font-weight: normal;
+  color: #AAA371;
+  margin: 0;
+  margin-bottom: 1.6875rem;
+  line-height: 1.4;
+}
+
+h2, .h2Style {
+  font-family: "pt_serifregular", serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #AAA371;
+  margin: 0;
+  margin-bottom: 1.6875rem;
+  line-height: 1.4;
+}
+
+h3, .h3Style {
+  font-family: "pt_serifregular", serif;
+  font-size: 1.875rem;
+  font-weight: normal;
+  color: #AAA371;
+  margin: 0;
+  margin-bottom: 1.6875rem;
+  line-height: 1.4;
+}
+
+p, .pStyle {
+  font-family: "latoregular", sans-serif;
+  font-size: 1.0625rem;
+  color: #797979;
+  margin: 0;
+  margin-bottom: 1.6875rem;
+  line-height: 1.9;
+}
+
+.tagStyle {
+  font-family: "latoregular", sans-serif;
+  font-size: 0.9375rem;
+  color: #A7A7A7;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.9;
+}
+
+.row {
+  max-width: 100rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.button {
+  display: inline-block;
+  border: solid 0.0625rem rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-family: "latoregular", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  box-shadow: none;
+  padding: 0.8125rem 1.5625rem;
+  border-radius: 0.3125rem;
+  margin-right: 0.625rem;
+  margin-bottom: 0.625rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a.button.button-primary {
+  background: #AAA371;
+}
+a.button.button-primary:hover {
+  background: transparent;
+  color: #AAA371;
+  border: solid 0.0625rem #AAA371;
+}
+
+a.button.button-secondary {
+  background: #A7A7A7;
+}
+a.button.button-secondary:hover {
+  background: transparent;
+  color: #A7A7A7;
+  border: solid 0.0625rem #A7A7A7;
+}
+
+.buttonWrap > .button:last-child {
+  margin-right: 0;
+}
+
+.lazy {
+  background-image: none;
+  background-color: #F1F1FA;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* Header */
+header#site-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: #F6F5F0;
+  padding: 0 1.25rem;
+}
+header#site-header > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+header#site-header > div a {
+  margin: 0;
+  color: #AAA371;
+  width: 100%;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+header#site-header > div a span {
+  display: none;
+}
+
+header#site-header #phone,
+header#site-header #email {
+  width: 2.125rem;
+  height: 1.875rem;
+  padding: 0;
+}
+
+header#site-header #phone a {
+  background: url("../images/telephone.svg") no-repeat 0% 50%/1.875rem 1.875rem;
+  margin-right: auto;
+}
+
+header#site-header #email a {
+  background: url("../images/envelope-open.svg") no-repeat 0% 50%/1.875rem 1.875rem;
+  background-position: 100% 50%;
+  margin-left: auto;
+}
+
+/* Sections */
+section.homepage-section {
+  background-color: #F6F5F0;
+}
+
+section.homepage-section .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+section.homepage-section .row > div {
+  padding: 3rem 1.25rem;
+  width: 50%;
+  flex: 1 1 100%;
+}
+section.homepage-section .row > div.sectionImage {
+  padding: 6.25rem 0;
+}
+
+section.homepage-section.center {
+  text-align: center;
+}
+
+section.homepage-section.carousel .carouselContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+section.homepage-section.carousel .carouselContainer > div {
+  flex: 1 1 100%;
+  height: 12.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+section.homepage-section.carousel .carouselContainer > div div.imageContainer {
+  position: absolute;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  transition: all 0.6s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 0;
+}
+section.homepage-section.carousel .carouselContainer > div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+section.homepage-section.carousel .carouselContainer > div a h3 {
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  margin: 0;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+  padding: 0 1.25rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.homepage-section.carousel .carouselContainer > div:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section.homepage-section.carousel .carouselContainer > div:hover div.imageContainer {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+section.homepage-section.carousel .carouselContainer > div:hover h3 {
+  -webkit-transform: translate(0rem, -1.25rem);
+  -ms-transform: translate(0rem, -1.25rem);
+  transform: translate(0rem, -1.25rem);
+}
+section.homepage-section.carousel .carouselContainer > div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.22);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+section.homepage-section.carousel .carouselContainer > div:last-child {
+  margin-bottom: 0;
+}
+
+#sectionOne {
+  background: #fff;
+}
+
+#sectionOne .h1Style + p {
+  font-size: 1.25rem;
+}
+
+#sectionTwo .sectionImage {
+  background: url("../images/section2image.png") no-repeat 50% 50%/cover;
+}
+
+#sectionThree .sectionImage {
+  background: url("../images/section3image.png") no-repeat 50% 50%/cover;
+}
+
+#sectionFour {
+  background: #fff;
+}
+
+#sectionFour .carouselContainer div.section41 > div {
+  background: url("../images/section4.1.png") no-repeat 50% 50%/cover;
+}
+
+#sectionFour .carouselContainer div.section42 > div {
+  background: url("../images/section4.2.png") no-repeat 50% 50%/cover;
+}
+
+#sectionFour .carouselContainer div.section43 > div {
+  background: url("../images/section4.3.png") no-repeat 50% 50%/cover;
+}
+
+@media screen and (min-width: 414px) {
+  section.homepage-section .row > div {
+    padding: 3rem 1.875rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  header#site-header {
+    padding: 0 1.875rem;
+  }
+  header#site-header > div {
+    width: auto;
+    height: auto;
+  }
+  header#site-header > div a {
+    background-position: 0 50% !important;
+    padding-left: 2.5rem;
+    width: auto;
+  }
+  header#site-header > div a span {
+    display: block;
+  }
+  header#site-header #logo a {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  a.button {
+    margin-right: 1.625rem;
+  }
+
+  header#site-header {
+    height: 9.0625rem;
+    padding: 0 3.25rem;
+  }
+  header#site-header > div a {
+    font-size: 1.25rem;
+  }
+
+  header#site-header #logo img {
+    height: 2.5rem;
+  }
+
+  section.homepage-section .row > div {
+    padding: 6.25rem 5rem;
+    flex: auto;
+  }
+
+  section.homepage-section.full .row {
+    max-width: 50rem;
+  }
+
+  section.homepage-section.full .row > div,
+section.homepage-section.carousel .row > div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  section.homepage-section.imageRight .row > div:first-child {
+    order: 2;
+  }
+
+  section.homepage-section.imageRight .row > div:nth-child(2) {
+    order: 1;
+  }
+
+  section.homepage-section.carousel .row {
+    max-width: 82.25rem;
+    padding: 0 3.25rem;
+  }
+
+  section.homepage-section.carousel .carouselContainer {
+    height: 25rem;
+  }
+  section.homepage-section.carousel .carouselContainer > div {
+    flex: auto;
+    height: auto;
+    margin: 0 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

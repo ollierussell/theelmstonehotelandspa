@@ -1,0 +1,48 @@
+/* Variables */
+/* Colors */
+$accentColor: #AAA371;
+$accentTint: #F6F5F0;
+$bodyColor:#797979;
+$greyColor:#A7A7A7;
+
+/* Fonts */
+$bodyFont: 'latoregular', sans-serif;
+$headingFont: 'pt_serifregular', serif;
+
+/* Mixins */
+@mixin heading($font-size,$line-height: 1.4,$margin-bottom:1.6875rem) {
+	font:{
+		family:$headingFont;
+		size:$font-size;
+		weight:normal;
+	};
+	color:$accentColor;
+	margin:0;
+	margin-bottom:$margin-bottom;
+	line-height: $line-height;
+}
+@mixin paragraph($font-size:1.0625rem,$line-height:1.9,$margin-bottom: 1.6875rem,$color:$bodyColor) {
+	font:{
+		family:$bodyFont;
+		size: $font-size;
+	};
+	color: $color;
+	margin:0;
+	margin-bottom: $margin-bottom;
+	line-height: $line-height;
+}
+@mixin headericons($url) {
+	background: $url no-repeat 0% 50%/1.875rem 1.875rem;
+}
+@mixin sectionbackgrounds($url) {
+	background: $url no-repeat 50% 50%/cover;
+}
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+}
+@mixin transition($property) {
+	-webkit-transition: $property;
+	transition: $property;
+}
